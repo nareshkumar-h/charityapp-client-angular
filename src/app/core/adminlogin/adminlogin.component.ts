@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DonorloginService } from 'src/app/service/donorlogin.service';
-
+import{ Router} from '@angular/router';
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
   styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
+  [x: string]: any;
   email:any;
   password:any;
 
@@ -29,8 +30,12 @@ export class AdminloginComponent implements OnInit {
        console.log(user);
        this.router.navigate(['viewfund']);
  */
+
     this.donorlogin.donorLogin(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
+      localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
+//console.log(user);
+this.router.navigate(['listrequest']);
       alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
