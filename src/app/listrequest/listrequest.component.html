@@ -1,0 +1,26 @@
+<br>
+<br>
+<br>
+<br>
+<h2>   REQUEST LIST </h2>
+
+<br>
+
+<table class="table">
+   <thead>
+       <tr>
+           <th>Request Id</th>
+           <th>Fund Needed</th>
+           <th>Requested By</th>
+           <th>Created Date</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let data of data">
+           <td>{{data.id}}</td>
+           <td>{{data.fundNeeded}}</td>
+           <td>{{data.requestedBy}}</td>
+           <td>{{data.createdDate}}</td>
+       </tr>
+   </tbody>
+</table>
