@@ -2,23 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { DonorserviceService } from '../service/donorservice.service';
 
 @Component({
-  selector: 'app-donortransaction',
-  templateUrl: './donortransaction.component.html',
-  styleUrls: ['./donortransaction.component.css']
+  selector: 'app-mydonationlist',
+  templateUrl: './mydonationlist.component.html',
+  styleUrls: ['./mydonationlist.component.css']
 })
-export class DonortransactionComponent implements OnInit {
-  
+export class MydonationlistComponent implements OnInit {
+
+  userId:any;
   constructor
   ( private donor:DonorserviceService) { }
   data:any;
   ngOnInit()
   {
-    this.listtransaction();
+    this.listmydonation();
   }
-  listtransaction()
-  {
+  listmydonation(){
+    let user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+   
+
+    let userId = user.id;
+  
     //alert('enter');
-        this.donor.listtransaction().subscribe( (res) => {
+        this.donor.listmytransaction(userId).subscribe( (res) => {
           console.log(JSON.stringify(res));
           this.data=res;
       //    alert('data'+res);
@@ -29,3 +34,4 @@ export class DonortransactionComponent implements OnInit {
         });
       }
 }
+

@@ -7,6 +7,8 @@ import { AdminloginComponent } from './core/adminlogin/adminlogin.component';
 import { DonorcontributeComponent } from './core/donorcontribute/donorcontribute.component';
 import { DonortransactionComponent } from './donortransaction/donortransaction.component';
 import { ListrequestComponent } from './listrequest/listrequest.component';
+import { MydonationlistComponent } from './mydonationlist/mydonationlist.component';
+import { DonorregisterComponent } from './core/donorregister/donorregister.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:'adminlogin',component:AdminloginComponent},
   {path:'donorcontribute',component:DonorcontributeComponent},
   {path:'donortransaction',component:DonortransactionComponent},
-  {path:'listrequest',component:ListrequestComponent}
+  {path:'listrequest',component:ListrequestComponent},
+  {path:'mydonationlist',component:MydonationlistComponent},
+  {path:'donorregister',component:DonorregisterComponent}
 ];
 
 @NgModule({

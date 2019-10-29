@@ -20,12 +20,8 @@ export class ListrequestComponent implements OnInit {
     this.listRequest();
   }
   listRequest() {
-    let formData :any= {
-      'categoryId':this.categoryId,
-      'fundNeeded':this.fundNeeded,
-      'requestedBy':this.requestedBy
-    };
-    this.requestor.listFundRequest(formData).subscribe( (res) => {
+    
+    this.requestor.listFundRequest().subscribe( (res) => {
       console.log(JSON.stringify(res));
       this.data=res;
       //alert('success');

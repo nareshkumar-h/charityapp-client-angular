@@ -14,6 +14,8 @@ import {RequestorserviceService} from './service/requestorservice.service'
 import { DonortransactionComponent } from './donortransaction/donortransaction.component';
 import { ListrequestComponent } from './listrequest/listrequest.component';
 import { DonorloginService } from './service/donorlogin.service';
+import { MydonationlistComponent } from './mydonationlist/mydonationlist.component';
+import { DonorregisterComponent } from './core/donorregister/donorregister.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DonorloginService } from './service/donorlogin.service';
     AdminloginComponent,
     DonorcontributeComponent,
     DonortransactionComponent,
-    ListrequestComponent
+    ListrequestComponent,
+    MydonationlistComponent,
+    DonorregisterComponent
   ],
   imports: [
     BrowserModule,

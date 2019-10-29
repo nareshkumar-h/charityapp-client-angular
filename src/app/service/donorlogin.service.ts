@@ -16,7 +16,12 @@ export class DonorloginService {
   
   donorLogin(formData:any):any
   {
-    return this.http.post(this.apiUrl+'/donor/login',formData);
+    return this.http.post(this.apiUrl+'/user/login',formData);
+  }
+
+  donorregister(formData:any):any
+  {
+    return this.http.post(this.apiUrl+'/user/register',formData);
   }
  }
 

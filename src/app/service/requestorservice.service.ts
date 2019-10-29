@@ -15,8 +15,8 @@ export class RequestorserviceService {
  apiUrl= 'https://charity-requestor.herokuapp.com/';
 
 
-  listFundRequest(formData:any):any
+  listFundRequest():any
  {
-   return this.http.get(this.apiUrl+'/fundrequest/listCurrentRequest',formData);
+   return this.http.get(this.apiUrl+'/fundrequest/listCurrentRequest');
  }
 }

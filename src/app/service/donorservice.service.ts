@@ -9,7 +9,7 @@ export class DonorserviceService {
   constructor(
     private http:HttpClient
     ) { }
-    apiUrl='https://charityapp-donor.herokuapp.com';
+    apiUrl='https://charityapp-donor.herokuapp.com/';
  
 addcontribute(formData:any):any
  {
@@ -18,7 +18,12 @@ addcontribute(formData:any):any
  }
  listtransaction():any
  {
-  return this.http.get(this.apiUrl+'Transaction');
+  return this.http.get(this.apiUrl+'Transaction/AllDonation');
+ }
+ 
+ listmytransaction(userId:any):any
+ {
+  return this.http.get(this.apiUrl+'Transaction/MyDonation?userId=' + userId);
  }
  
 }
