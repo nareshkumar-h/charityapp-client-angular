@@ -24,13 +24,13 @@ export class AdminloginComponent implements OnInit {
       'password':this.password
     };
     
-
-    var user = { "id" : 1 , "name":"Keyne"};
+/*
+    var user = { "id" : 1 , "name":"Pradeepa"};
        localStorage.setItem("LOGGED_IN_USER", JSON.stringify(user));
        console.log(user);
        this.router.navigate(['listrequest']);
-
-/*   
+*/
+  
     this.donorlogin.donorLogin(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
       localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
@@ -39,7 +39,8 @@ this.router.navigate(['listrequest']);
       alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
-    });*/ 
+      alert(err.error.message);
+    });
   
   }
 }

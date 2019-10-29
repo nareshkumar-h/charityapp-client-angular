@@ -11,7 +11,7 @@ export class DonorloginService {
     private http:HttpClient
   ) { }
 
-  apiUrl='https://charityapp-user-service.herokuapp.com';
+  apiUrl='https://userapp-v1.herokuapp.com';
   //apiUrl= 'http://localhost:9000';
   
   donorLogin(formData:any):any

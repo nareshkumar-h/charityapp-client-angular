@@ -9,7 +9,7 @@ export class DonorserviceService {
   constructor(
     private http:HttpClient
     ) { }
-    apiUrl='http://localhost:9001/';
+    apiUrl='https://charityapp-donor.herokuapp.com';
  
 addcontribute(formData:any):any
  {
