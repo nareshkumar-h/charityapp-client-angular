@@ -30,5 +30,10 @@ addcontribute(formData:any):any
  {
   return this.http.get(this.apiUrl+'Transaction/DonationByRequestId?requestId=' + requestId);
  }
+
+ ContributedAmountByRequest(requestId:any):any
+ {
+  return this.http.get(this.apiUrl+'Transaction/TotalAmountById?requestId=' + requestId);
+ }
 }
 

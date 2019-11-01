@@ -14,15 +14,17 @@
 <br>
 <br>
 <h2>REQUEST LIST</h2>
-                   <table class="table">
+{{request|json}}
+{{amount}}
+<table class="table">
                            <thead>
                                 <tr>
                                     <th>Sl.No</th>
                                         <th>Request Type</th>
                                         <th>Description</th>
-                                        <th>Fund Needed(Rs)</th>
+                                        <th>Fund Needed</th>
                                         <th>Requested By</th>
-                                        <th>Created Date</th>
+                                        <th>Requested On</th>
                                 </tr>
                             </thead>
                            <tbody>
@@ -31,7 +33,7 @@
                                         <td>{{i+1}}</td>
                                         <td>{{data.categoryName}}</td>
                                         <td>{{data.description}}</td>
-                                        <td>{{data.fundNeeded}}</td>
+                                        <td>Rs.{{data.fundNeeded}}</td>
                                         <td>{{data.requestedByName}}</td>
                                         <td>{{data.createdDate}}</td>
                                 
@@ -44,29 +46,3 @@
    
          
       
-<!--
-<h2>   REQUEST LIST </h2>
-
-<br>
-
-<table class="table">
-   <thead>
-       <tr>
-           <th>Request Id</th>
-           <th>Fund Needed</th>
-           <th>Requested By</th>
-           <th>Created Date</th>
-       </tr>
-   </thead>
-   <tbody>
-       <tr *ngFor="let data of data">
-           <td>{{data.id}}</td>
-           <td>{{data.fundNeeded}}</td>
-           <td>{{data.requestedBy}}</td>
-           <td>{{data.createdDate}}</td>
-       </tr>
-   </tbody>
-</table>
-
-
--->

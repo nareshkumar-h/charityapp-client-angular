@@ -23,6 +23,8 @@ constructor(private requestor:RequestorserviceService,private route: ActivatedRo
   ngOnInit() {
     this.viewRequest(this.requestId);
     this.listDonorByRequest(this.requestId);
+    
+    this.viewAmountByRequest(this.requestId);
   }
   donationlist:any;
 
@@ -43,4 +45,20 @@ constructor(private requestor:RequestorserviceService,private route: ActivatedRo
       this.request = res;
     });
   }
+
+  amount:any;
+
+  viewAmountByRequest(requestId){
+    console.log(requestId);
+    this.donor.ContributedAmountByRequest(requestId).subscribe ( (res) =>{
+      console.log(res);
+      console.log(JSON.stringify(res));
+      this.amount = res;
+    });
+  }
+
+  getPercentage(requestedAmount, amountfunded) {
+    return Math.floor( 100*(amountfunded/requestedAmount));
+  }
+  
 }

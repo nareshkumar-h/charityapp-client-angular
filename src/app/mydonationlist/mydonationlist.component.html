@@ -39,7 +39,7 @@
                                 <tr>
                                         <th>Sl.No</th>
                                         <th>Request Type</th>
-                                        <th>Donated Amount(Rs)</th>
+                                        <th>Donated Amount</th>
                                         <th>Donated On</th>
                                     
                                 </tr>
@@ -48,7 +48,7 @@
                                 <tr *ngFor="let data of data;let i=index">
                                         <td>{{i+1}}</td>
                                         <td>{{data.categoryName}}</td>
-                                        <td>{{data.fundNeeded}}</td>
+                                        <td>Rs.{{data.fundNeeded}}</td>
                                         <td>{{data.createdDate}}</td>
                                         
                                     </tr>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestorserviceService } from '../service/requestorservice.service';
+import { DonorserviceService } from '../service/donorservice.service';
 
 @Component({
   selector: 'app-listrequest',
@@ -11,9 +12,10 @@ export class ListrequestComponent implements OnInit {
   categoryId:any;
   fundNeeded:any;
   requestedBy:any;
+  requestId:any;
 
   constructor(
-    private requestor:RequestorserviceService
+    private requestor:RequestorserviceService,private donor:DonorserviceService
   ) { }
  data:any;
   ngOnInit() {
@@ -28,6 +30,9 @@ export class ListrequestComponent implements OnInit {
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
     });
+  }
+   
+  
 
   }
-}
+
