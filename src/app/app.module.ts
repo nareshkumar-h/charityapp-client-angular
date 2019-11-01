@@ -19,6 +19,7 @@ import { DonorregisterComponent } from './core/donorregister/donorregister.compo
 import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
+import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.co
     MydonationlistComponent,
     DonorregisterComponent,
     ViewrequestComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    ListRequestContributionComponent
   ],
   imports: [
     BrowserModule,

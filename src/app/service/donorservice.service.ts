@@ -26,5 +26,9 @@ addcontribute(formData:any):any
   return this.http.get(this.apiUrl+'Transaction/MyDonation?userId=' + userId);
  }
  
+ listContributionByRequest(requestId:any):any
+ {
+  return this.http.get(this.apiUrl+'Transaction/DonationByRequestId?requestId=' + requestId);
+ }
 }
 

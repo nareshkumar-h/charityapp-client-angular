@@ -9,39 +9,38 @@
             </div>
         </div>
     </div>
-</div>-->
-<div class="row justify-content-center">
-   <div class="col-md-5">
-       <div class="card border-secondary">
-         <div class="card-body">
-           <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
-           <h4 class="card-title">REQUEST LIST</h4>
-           <div class="card-text">
+</div>--><br>
+<br>
+<br>
+<br>
+<h2>REQUEST LIST</h2>
                    <table class="table">
                            <thead>
                                 <tr>
-                                    
+                                    <th>Sl.No</th>
                                         <th>Request Type</th>
-                                        <th>Fund Needed</th>
+                                        <th>Description</th>
+                                        <th>Fund Needed(Rs)</th>
                                         <th>Requested By</th>
                                         <th>Created Date</th>
                                 </tr>
                             </thead>
                            <tbody>
-                                <tr *ngFor="let data of data">
-                                        
+                                <tr *ngFor="let data of data;let i=index">
+       
+                                        <td>{{i+1}}</td>
                                         <td>{{data.categoryName}}</td>
+                                        <td>{{data.description}}</td>
                                         <td>{{data.fundNeeded}}</td>
                                         <td>{{data.requestedByName}}</td>
                                         <td>{{data.createdDate}}</td>
                                 
-                                        <td><a class="btn-btn-primary" routerLink="{{data.id}}" >Contribute </a></td>
-                                </tr>
+                                        <td><a class="btn btn-primary" routerLink="{{data.id}}" >Contribute </a></td>
+                                        <td><a class="btn btn-info" routerLink="../list-requestcontribution/{{data.id}}" >view </a></td>
+                                
+                                    </tr>
                             </tbody>
                        </table>
-                   </div>
-         </div>
-
    
          
       

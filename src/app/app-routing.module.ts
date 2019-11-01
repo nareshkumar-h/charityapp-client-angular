@@ -12,6 +12,7 @@ import { DonorregisterComponent } from './core/donorregister/donorregister.compo
 import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
+import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'donorregister',component:DonorregisterComponent},
   {path:'auth',component:AuthService},
   {path:'listrequest/:id',component:ViewrequestComponent},
-  {path:'forgotpassword',component:ForgotpasswordComponent}
+  {path:'forgotpassword',component:ForgotpasswordComponent},
+  {path:'list-requestcontribution/:id',component:ListRequestContributionComponent}
 ];
 
 @NgModule({

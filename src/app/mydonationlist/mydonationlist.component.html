@@ -37,17 +37,17 @@
                    <table class="table">
                            <thead>
                                 <tr>
+                                        <th>Sl.No</th>
                                         <th>Request Type</th>
-                        
                                         <th>Donated Amount(Rs)</th>
-                                        <th>Date</th>
+                                        <th>Donated On</th>
                                     
                                 </tr>
                             </thead>
                            <tbody>
-                                <tr *ngFor="let data of data">
+                                <tr *ngFor="let data of data;let i=index">
+                                        <td>{{i+1}}</td>
                                         <td>{{data.categoryName}}</td>
-                                
                                         <td>{{data.fundNeeded}}</td>
                                         <td>{{data.createdDate}}</td>
                                         

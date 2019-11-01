@@ -1,0 +1,60 @@
+<p>list-request-contribution works!</p>
+
+<br>
+<br>
+<br>
+<br><h2> Request detail</h2>
+<br>
+<table class="table">
+                                <thead>
+                                     <tr>
+                                               
+                                             <th>Request Type</th>
+                                             <th>Title</th>
+                                             <th>Description</th>
+                                             <th>Fund Needed(Rs)</th>
+                                             <th>Requested By</th>
+                                             <th>Requested On</th>
+                                     </tr>
+                                 </thead>
+                                <tbody>
+                                     <tr>
+                                             
+                                             <td>{{request.categoryName}}</td>
+                                             <td>{{request.title}}</td>
+                                             <td>{{request.description}}</td>
+                                             <td>{{request.fundNeeded}}</td>
+                                             <td>{{request.requestedByName}}</td>
+                                             <td>{{request.createdDate}}</td>
+                                     </tr>
+                                 </tbody>
+                            </table> 
+                        
+
+<br>
+<br>
+<h2>Contributors</h2>
+<!--{{request|json}}
+{{donationlist|json}}-->
+<table class="table">
+       
+   <thead>
+       <tr>
+           <th>Sl.No</th>
+           <th>Donated By</th>
+           <th>Donated Amount(Rs)</th>
+           <th>Donated On</th>
+        
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let data of donationlist;let i=index">
+           <td>{{i+1}}</td>
+           
+           <td>{{data.name}}</td>
+           <td>{{data.amount}}</td>
+           <td>{{data.createdDate}}</td>
+    
+       </tr>
+   </tbody>
+</table>
