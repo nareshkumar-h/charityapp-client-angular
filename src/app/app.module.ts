@@ -16,6 +16,9 @@ import { ListrequestComponent } from './listrequest/listrequest.component';
 import { DonorloginService } from './service/donorlogin.service';
 import { MydonationlistComponent } from './mydonationlist/mydonationlist.component';
 import { DonorregisterComponent } from './core/donorregister/donorregister.component';
+import { AuthService } from './service/auth.service';
+import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
+import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { DonorregisterComponent } from './core/donorregister/donorregister.compo
     DonortransactionComponent,
     ListrequestComponent,
     MydonationlistComponent,
-    DonorregisterComponent
+    DonorregisterComponent,
+    ViewrequestComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { DonorregisterComponent } from './core/donorregister/donorregister.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [DonorserviceService,RequestorserviceService,DonorloginService],
+  providers: [DonorserviceService,RequestorserviceService,DonorloginService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

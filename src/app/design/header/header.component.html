@@ -7,25 +7,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="../donorregister">Donor Register <span class="sr-only">(current)</span></a>
+          
+          <li class="nav-item" *ngIf='!isLoggedIn()'> 
+            <a class="nav-link" routerLink="../donorregister">Start a FundRaiser<span class="sr-only">(current)</span></a>
           </li>  
-          <li class="nav-item">
-     <a class="nav-link" routerLink="../adminlogin">Donor Login <span class="sr-only">(current)</span></a>
-   </li>  
-       <li class="nav-item">
-     <a class="nav-link"  routerLink="../donorcontribute"> Contribute <span class="sr-only">(current)</span></a>
+          <li class="nav-item" *ngIf='!isLoggedIn()'>
+     <a class="nav-link" routerLink="../adminlogin">Sign In <span class="sr-only">(current)</span></a>
    </li>
-   <li class="nav-item">
-    <a class="nav-link"  routerLink="../listrequest"> Request List <span class="sr-only">(current)</span></a>
+   <!--  
+       <li class="nav-item" *ngIf='isLoggedIn()'>
+     <a class="nav-link"  routerLink="../donorcontribute"> Wanna Contribute!! <span class="sr-only">(current)</span></a>
+   </li>-->
+   <li class="nav-item" *ngIf='isLoggedIn()'>
+    <a class="nav-link"  routerLink="../listrequest"> Demand <span class="sr-only">(current)</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link"  routerLink="../donortransaction"> All Donation <span class="sr-only">(current)</span></a>
+  <li class="nav-item" *ngIf='isLoggedIn()'>
+    <a class="nav-link"  routerLink="../donortransaction"> Givers <span class="sr-only">(current)</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link"  routerLink="../mydonationlist"> My Donation <span class="sr-only">(current)</span></a>
+  <li class="nav-item" *ngIf='isLoggedIn()'>
+    <a class="nav-link"  routerLink="../mydonationlist"> My Contribution <span class="sr-only">(current)</span></a>
   </li>
-      
+  <li class="nav-item" *ngIf='isLoggedIn()'>
+    <a class="nav-link" (click)='logout()'>Welcome {{authservice.getUser().name}} :)  Log Out  </a>
+  </li>  
     </ul>
         
     </div>

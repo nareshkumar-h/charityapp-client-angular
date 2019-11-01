@@ -34,7 +34,7 @@ export class AdminloginComponent implements OnInit {
     this.donorlogin.donorLogin(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
       localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
-//console.log(user);
+console.log("LOGGED_IN_USER");
 this.router.navigate(['listrequest']);
       alert('success');
     }, (err) =>{

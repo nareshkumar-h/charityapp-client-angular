@@ -13,9 +13,9 @@ export class DonortransactionComponent implements OnInit {
   data:any;
   ngOnInit()
   {
-    this.listtransaction();
+    this.listTransaction();
   }
-  listtransaction()
+  listTransaction()
   {
     //alert('enter');
         this.donor.listtransaction().subscribe( (res) => {

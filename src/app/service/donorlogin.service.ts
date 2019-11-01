@@ -23,6 +23,11 @@ export class DonorloginService {
   {
     return this.http.post(this.apiUrl+'/user/register',formData);
   }
+
+  forgetPassword(email:string):any
+  {
+    return this.http.get(this.apiUrl+'/user/forgotpassword?email='+email);
+  }
  }
 
 

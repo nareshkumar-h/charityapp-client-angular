@@ -19,4 +19,9 @@ export class RequestorserviceService {
  {
    return this.http.get(this.apiUrl+'/fundrequest/listCurrentRequest');
  }
+
+ findOne(categoryId)
+ {
+   return this.http.get(this.apiUrl+'/fundrequest/'+categoryId);
+ }
 }

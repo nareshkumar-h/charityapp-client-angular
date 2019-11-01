@@ -9,6 +9,9 @@ import { DonortransactionComponent } from './donortransaction/donortransaction.c
 import { ListrequestComponent } from './listrequest/listrequest.component';
 import { MydonationlistComponent } from './mydonationlist/mydonationlist.component';
 import { DonorregisterComponent } from './core/donorregister/donorregister.component';
+import { AuthService } from './service/auth.service';
+import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
+import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 
 
 const routes: Routes = [
@@ -19,7 +22,10 @@ const routes: Routes = [
   {path:'donortransaction',component:DonortransactionComponent},
   {path:'listrequest',component:ListrequestComponent},
   {path:'mydonationlist',component:MydonationlistComponent},
-  {path:'donorregister',component:DonorregisterComponent}
+  {path:'donorregister',component:DonorregisterComponent},
+  {path:'auth',component:AuthService},
+  {path:'listrequest/:id',component:ViewrequestComponent},
+  {path:'forgotpassword',component:ForgotpasswordComponent}
 ];
 
 @NgModule({

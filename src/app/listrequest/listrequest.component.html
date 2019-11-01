@@ -1,7 +1,51 @@
-<br>
-<br>
-<br>
-<br>
+<!--
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" src="https://i.postimg.cc/7YyYRCbd/contribute.jpg" height="200px" width="200px" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+<div class="row justify-content-center">
+   <div class="col-md-5">
+       <div class="card border-secondary">
+         <div class="card-body">
+           <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
+           <h4 class="card-title">REQUEST LIST</h4>
+           <div class="card-text">
+                   <table class="table">
+                           <thead>
+                                <tr>
+                                    
+                                        <th>Request Type</th>
+                                        <th>Fund Needed</th>
+                                        <th>Requested By</th>
+                                        <th>Created Date</th>
+                                </tr>
+                            </thead>
+                           <tbody>
+                                <tr *ngFor="let data of data">
+                                        
+                                        <td>{{data.categoryName}}</td>
+                                        <td>{{data.fundNeeded}}</td>
+                                        <td>{{data.requestedByName}}</td>
+                                        <td>{{data.createdDate}}</td>
+                                
+                                        <td><a class="btn-btn-primary" routerLink="{{data.id}}" >Contribute </a></td>
+                                </tr>
+                            </tbody>
+                       </table>
+                   </div>
+         </div>
+
+   
+         
+      
+<!--
 <h2>   REQUEST LIST </h2>
 
 <br>
@@ -24,3 +68,6 @@
        </tr>
    </tbody>
 </table>
+
+
+-->

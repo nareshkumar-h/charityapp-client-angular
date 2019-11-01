@@ -1,0 +1,48 @@
+<!---->
+<br>
+<p>viewrequest works!</p>
+<div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card border-secondary">
+              <div class="card-body">
+                <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
+                <h4 class="card-title">CONTRIBUTE</h4>
+                <div class="card-text">
+                        <!--<table class="table">
+                                <thead>
+                                     <tr>
+                                             <th>Request Id</th>                         
+                                             <th>Fund Needed</th>
+                                             <th>Requested By</th>
+                                             <th>Created Date</th>
+                                     </tr>
+                                 </thead>
+                                <tbody>
+                                     <tr>
+                                             <td>{{request.id}}</td>
+                                             <td>{{request.fundNeeded}}</td>
+                                             <td>{{request.requestedBy}}</td>
+                                             <td>{{request.createdDate}}</td>
+                                     </tr>
+                                 </tbody>
+                            </table> -->
+                            <form (submit)="addContribute()">
+                            <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                Amount(Rs)
+                                            </div>
+                                        </div>
+                                        <input type="number" [(ngModel)]= "amount" name="amount"min=1   id="amount" class="form-control" placeholder="Amount" required>
+                                    </div>
+                                </div>
+
+                            <button  type="submit" class="btn btn-outline-secondary">contribute</button>
+                            <button style="margin-left: 5px;"  type="reset" class="btn btn-outline-secondary">reset</button>
+                        </form>        
+                        </div>
+              </div>
+     
+     
+            

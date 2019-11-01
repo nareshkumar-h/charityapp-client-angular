@@ -1,4 +1,4 @@
-
+<!--
 <br>
 <br>
 <br>
@@ -26,3 +26,33 @@
        </tr>
    </tbody>
 </table>
+-->
+<div class="row justify-content-center">
+   <div class="col-md-5">
+       <div class="card border-secondary">
+         <div class="card-body">
+           <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
+           <h4 class="card-title">My DONATION</h4>
+           <div class="card-text">
+                   <table class="table">
+                           <thead>
+                                <tr>
+                                        <th>Request Type</th>
+                        
+                                        <th>Donated Amount(Rs)</th>
+                                        <th>Date</th>
+                                    
+                                </tr>
+                            </thead>
+                           <tbody>
+                                <tr *ngFor="let data of data">
+                                        <td>{{data.categoryName}}</td>
+                                
+                                        <td>{{data.fundNeeded}}</td>
+                                        <td>{{data.createdDate}}</td>
+                                        
+                                    </tr>
+                            </tbody>
+                       </table>
+                   </div>
+         </div>
