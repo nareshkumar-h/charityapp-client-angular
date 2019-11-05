@@ -13,6 +13,8 @@ import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
+import { ViewRequestorVideoServiceService } from './service/view-requestor-video-service.service';
+import { ViewRequestorVideoComponent } from './view-requestor-video/view-requestor-video.component';
 
 
 const routes: Routes = [
@@ -27,7 +29,8 @@ const routes: Routes = [
   {path:'auth',component:AuthService},
   {path:'listrequest/:id',component:ViewrequestComponent},
   {path:'forgotpassword',component:ForgotpasswordComponent},
-  {path:'list-requestcontribution/:id',component:ListRequestContributionComponent}
+  {path:'list-requestcontribution/:id',component:ListRequestContributionComponent},
+  {path:'view-requestor-video/:requestId',component:ViewRequestorVideoComponent}
 ];
 
 @NgModule({

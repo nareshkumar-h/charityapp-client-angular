@@ -20,6 +20,7 @@ import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
+import { ViewRequestorVideoComponent } from './view-requestor-video/view-requestor-video.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListRequestContributionComponent } from './core/list-request-contributi
     DonorregisterComponent,
     ViewrequestComponent,
     ForgotpasswordComponent,
-    ListRequestContributionComponent
+    ListRequestContributionComponent,
+    ViewRequestorVideoComponent
   ],
   imports: [
     BrowserModule,
