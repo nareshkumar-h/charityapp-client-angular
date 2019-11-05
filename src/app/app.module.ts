@@ -21,6 +21,7 @@ import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
 import { AvatarModule } from 'ngx-avatar';
+import { ViewRequestorVideoComponent } from './view-requestor-video/view-requestor-video.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AvatarModule } from 'ngx-avatar';
     DonorregisterComponent,
     ViewrequestComponent,
     ForgotpasswordComponent,
-    ListRequestContributionComponent
+    ListRequestContributionComponent,
+    ViewRequestorVideoComponent
   ],
   imports: [
     BrowserModule,
