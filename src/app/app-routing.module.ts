@@ -13,21 +13,22 @@ import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
+import { AuthguardGuard } from './authguard.guard';
 
 
 const routes: Routes = [
   {path:'header',component:HeaderComponent},
   {path:'footer',component:FooterComponent},
-  {path:'adminlogin',component:AdminloginComponent},
-  {path:'donorcontribute',component:DonorcontributeComponent},
-  {path:'donortransaction',component:DonortransactionComponent},
-  {path:'listrequest',component:ListrequestComponent},
-  {path:'mydonationlist',component:MydonationlistComponent},
   {path:'donorregister',component:DonorregisterComponent},
-  {path:'auth',component:AuthService},
-  {path:'listrequest/:id',component:ViewrequestComponent},
+  {path:'adminlogin',component:AdminloginComponent},
   {path:'forgotpassword',component:ForgotpasswordComponent},
-  {path:'list-requestcontribution/:id',component:ListRequestContributionComponent}
+  {path:'donorcontribute',component:DonorcontributeComponent,canActivate:[AuthguardGuard]},
+  {path:'donortransaction',component:DonortransactionComponent,canActivate:[AuthguardGuard]},
+  {path:'listrequest',component:ListrequestComponent,canActivate:[AuthguardGuard]},
+  {path:'mydonationlist',component:MydonationlistComponent,canActivate:[AuthguardGuard]},
+  {path:'auth',component:AuthService},
+  {path:'listrequest/:id',component:ViewrequestComponent,canActivate:[AuthguardGuard]},
+  {path:'list-requestcontribution/:id',component:ListRequestContributionComponent,canActivate:[AuthguardGuard]}
 ];
 
 @NgModule({

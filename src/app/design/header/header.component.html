@@ -28,7 +28,9 @@
     <a class="nav-link"  routerLink="../mydonationlist"> My Donation <span class="sr-only">(current)</span></a>
   </li>
   <li class="nav-item" *ngIf='isLoggedIn()'>
-    <a class="nav-link" (click)='logout()'>Welcome {{authservice.getUser().name}} :)  Log Out  </a>
+    <a class="nav-link" (click)='logout()'>Welcome {{authservice.getUser().name}} :)<ngx-avatar [round]="true" 
+      size="50" name="{{authservice.getUser().name}}"
+       gravatarId="{{authservice.getUser().email}}"></ngx-avatar>  Log Out  </a>
   </li>  
     </ul>
         

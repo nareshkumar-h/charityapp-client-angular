@@ -20,6 +20,7 @@ import { AuthService } from './service/auth.service';
 import { ViewrequestComponent } from './core/viewrequest/viewrequest.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { ListRequestContributionComponent } from './core/list-request-contribution/list-request-contribution.component';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ListRequestContributionComponent } from './core/list-request-contributi
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AvatarModule,
   ],
   providers: [DonorserviceService,RequestorserviceService,DonorloginService,AuthService],
   bootstrap: [AppComponent]
